@@ -44,7 +44,6 @@
 #include <boost/container/flat_map.hpp>
 #endif
 
-#include "cli/debug.hpp"
 #include "cli/gog.hpp"
 #include "cli/goggalaxy.hpp"
 
@@ -66,6 +65,7 @@
 
 #include "util/boostfs_compat.hpp"
 #include "util/console.hpp"
+#include "util/debug.hpp"
 #include "util/encoding.hpp"
 #include "util/fstream.hpp"
 #include "util/load.hpp"
@@ -159,7 +159,7 @@ public:
 					throw std::exception();
 				}
 			} catch(...) {
-				throw std::runtime_error("Coul not open output file \"" + path_.string() + '"');
+				throw std::runtime_error("Could not open output file \"" + path_.string() + '"');
 			}
 		}
 	}
